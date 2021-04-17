@@ -16,10 +16,10 @@
 			border-radius: 20px;
 		}
 		.div2{
-			margin: auto;
-			width: 390px;
+			margin: 1px 461px;
+			width: 470px;
 			height: 100px;
-			background-color: white; 
+			background-color: none; 
 		}
 
 		.body {
@@ -40,19 +40,23 @@
 			height: 18px;
 		}
 
-		.input{
+		.boton{
 			background-color: #FFDA63;
-             border: none;
              color: black;
-             padding: 6px 15px;
+             border-color: rgba(0, 0, 0, 0.5);
+             padding: 1px 15px;
              text-align: center;
              text-decoration: none;
              display: inline-block;  
              font-size:15px;
-             font-family: Arial;
-  			 border-radius: 20px;
+             font-family: Arial black;
+  			 border-radius: 23px;
 
              margin: 0px auto;
+		}
+
+		.agregar{
+			padding: 1px 4px;
 		}
 
 		.tabla{
@@ -62,20 +66,6 @@
 
 		}
 
-		.boton{
-             background-color: #FFDA63;
-             border: none;
-             color: black;
-             padding: 15px 32px;
-             text-align: center;
-             text-decoration: none;
-             display: inline-block;  
-             font-size:15px;
-             font-family: Arial;
-  			 border-radius: 20px;
-
-             margin: 0px auto;
-         }
 
 
 
@@ -83,7 +73,7 @@
 </head>
 
 <body class = "body">
-	<button class="boton" onclick="location.href='menu.php'">Menú</button>
+	
 	<center>
 	
 	<br><br><br>
@@ -93,7 +83,7 @@
 
 		<form action="" method="post">
 			<input class="barra" value="" maxlength="40" type="text" name="str">
-			<input class= "input" value="Filtrar" type="submit" name="Filtrar"><br>
+			<input class= "boton" value="Filtrar" type="submit" name="Filtrar"><br>
 		</form>
 
 			<br>
@@ -184,7 +174,12 @@
 		
 	?>
 		</table>
-    	<button onclick="location.href='AddEmpleado.php'">Agregar Empleado</button><br>
+
+		<div class="div2">
+			<button class="boton agregar" onclick="location.href='AddEmpleado.php'">Agregar Empleado</button><br>
+			<button class="boton" onclick="location.href='menu.php'">Menú</button>
+		</div>
+    	<br>
 		</center>
 	</div>
 </body>
