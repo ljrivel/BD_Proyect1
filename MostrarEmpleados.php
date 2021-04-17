@@ -10,17 +10,25 @@
 
 		.div{
 			margin: auto;
-			width: 800px;
-			height: 800px;
+			width: 1020px;
+			height: 1100px;
 			background-color: white; 
 			border-radius: 20px;
 		}
 		.div2{
-			margin: 1px 461px;
+			margin: 1px 662px;
 			width: 470px;
 			height: 100px;
 			background-color: none; 
 		}
+		.minidiv{
+			margin: 0px 1306px;
+			width: 100px;
+			height: 28px;
+			background-color: none	; 
+		}
+
+
 
 		.body {
   			background: #EC610B;
@@ -36,7 +44,7 @@
 		}
 
 		.barra{
-			width: 400px;
+			width: 880px;
 			height: 18px;
 		}
 
@@ -50,20 +58,31 @@
              display: inline-block;  
              font-size:15px;
              font-family: Arial black;
-  			 border-radius: 23px;
+  			 border-radius: 8px;
 
              margin: 0px auto;
 		}
 
 		.agregar{
-			padding: 1px 4px;
+			font-size:17px;
+			padding: 1px 16px;
+		}
+
+		.menu{
+			padding: 2px 35px;
+			background-color: #83CA09;
 		}
 
 		.tabla{
-			width: 750px;
+			width: 980px;
 			font-family: Arial;
 			font-size: 15px;
 
+		}
+		.emojis{
+			border-color: white	;
+			font-size:18px;
+			background-color: white; 
 		}
 
 
@@ -76,7 +95,11 @@
 	
 	<center>
 	
-	<br><br><br>
+	<div class="minidiv">
+		<br>
+		<br>
+		<button class="boton menu" onclick="location.href='menu.php'">Menú</button>
+	</div>
 	<div class="div">
 		<br>
 		<h1 class="h2">Lista de empleados registrados</h1>	
@@ -85,9 +108,8 @@
 			<input class="barra" value="" maxlength="40" type="text" name="str">
 			<input class= "boton" value="Filtrar" type="submit" name="Filtrar"><br>
 		</form>
-
-			<br>
 			<table class="tabla" border="2">
+			<br>
 		<tr>
 			<th>ID</th>
             <th>Tipo de identificación</th>
@@ -99,11 +121,6 @@
             <th>....</th>
             <th>....</th>
 		</tr>
-
-	
-	
-
-
 
 
 	<?php
@@ -139,8 +156,8 @@
 			<td align='center'><?php echo $fecha ?></td>
             <td align='center'><?php echo $puesto ?></td>
             <td align='center'><?php echo $departamento ?></td>
-			<td align='center'><button onclick="location.href='EditarEmpleado.php?id=<?php echo "$id&tipo=$tipoDoc&identificacion=$identificacion&nombre=$nombre&puesto=$puesto&dep=$departamento&fecha=$fecha"; ?>'">Editar</button></td>
-			<td align='center'><button onclick="location.href='MostrarEmpleados.php?eliminar=<?php echo $id ?>'">Eliminar</button></td>
+			<td align='center'><button class="emojis" onclick="location.href='EditarEmpleado.php?id=<?php echo "$id&tipo=$tipoDoc&identificacion=$identificacion&nombre=$nombre&puesto=$puesto&dep=$departamento&fecha=$fecha"; ?>'">&#9997</button></td>
+			<td align='center'><button class="emojis"> onclick="location.href='MostrarEmpleados.php?eliminar=<?php echo $id ?>'">&#10060</button></td>
 			</tr>
             
 	<?php
@@ -177,11 +194,14 @@
 
 		<div class="div2">
 			<button class="boton agregar" onclick="location.href='AddEmpleado.php'">Agregar Empleado</button><br>
-			<button class="boton" onclick="location.href='menu.php'">Menú</button>
+			
 		</div>
     	<br>
 		</center>
 	</div>
+
+		
+
 </body>
 
 </html>
