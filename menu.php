@@ -6,6 +6,20 @@
 	<title>Inicio</title>
 
 	<style >
+
+		.div{
+			margin: auto;
+			width: 500px;
+			height: 200px;
+			background-color: white; 
+		}
+		.div2{
+			margin: auto;
+			width: 390px;
+			height: 100px;
+			background-color: white; 
+		}
+
 		.body {
   			background: #EC610B;
  			 min-height: 100vh;
@@ -39,23 +53,36 @@
              font-size:22px;
              font-family: Arial;
   			 border-radius: 20px;
+
              margin: 0px auto;
          }
 		.botonAzul{
              background-color: #008CBA;
 		}
 
+
 	</style>
 
 </head>
 
 <body class="body">
-	    <br>
-        <h2 class="h2">Menú Principal</h2>
-        <br>
-        <button class="boton" onclick="location.href='MostrarPuestos.php'">Puestos &#128273</button>
-        <button class="boton botonAzul" onclick="location.href='MostrarEmpleados.php'">&#128119Empleados</button>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="div">
+	    	<br>
+       		<h2 class="h2">Menú Principal</h2>
+       		 <br>
+        	<div class="div2">
+        		<br>
+        		<button class="boton" onclick="location.href='MostrarPuestos.php'">&#128188 Puestos</button>
 
+        		<button class="boton botonAzul" onclick="location.href='MostrarEmpleados.php'">&#128119Empleados</button>
+    	</div>
+    </div>
 	
 </body>
 
