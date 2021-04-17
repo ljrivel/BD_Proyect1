@@ -22,7 +22,7 @@
 			background-color: none; 
 		}
 		.minidiv{
-			margin: 0px 1306px;
+			margin: 0px 1329px;
 			width: 100px;
 			height: 28px;
 			background-color: none	; 
@@ -69,8 +69,9 @@
 		}
 
 		.menu{
-			padding: 2px 35px;
-			background-color: #83CA09;
+			padding: 0px 25px;
+			font-size:25px;
+			background-color: #09CA76;
 		}
 
 		.tabla{
@@ -85,9 +86,6 @@
 			background-color: white; 
 		}
 
-
-
-
 	</style>
 </head>
 
@@ -98,7 +96,7 @@
 	<div class="minidiv">
 		<br>
 		<br>
-		<button class="boton menu" onclick="location.href='menu.php'">Menú</button>
+		<button class="boton menu" onclick="location.href='menu.php'">&#127968</button>
 	</div>
 	<div class="div">
 		<br>
