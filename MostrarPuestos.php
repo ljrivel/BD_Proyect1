@@ -15,16 +15,16 @@
 			border-radius: 20px;
 		}
 		.div2{
-			margin: 1px 269px;
+			margin: 3px 269px;
 			width: 470px;
 			height: 100px;
 			background-color: none; 
 		}
 		.minidiv{
-			margin: 0px 1125px;
+			margin: 0px 638px;
 			width: 100px;
 			height: 28px;
-			background-color: none	; 
+			background-color: none; 
 		}
 
 
@@ -77,8 +77,25 @@
 			width: 550px;
 			font-family: Arial;
 			font-size: 15px;
-
+			border-color: white;
+			
 		}
+
+		.subtabla{
+			background-color: white; 
+			margin: 0px 0px;
+			border-color: black;
+			border-width: 0px;
+		}
+
+
+		.encabezado{
+			background-color:#FFDA63;
+			border-color: black;
+			border-width: 0px;
+			
+		}
+
 		.emojis{
 			border-color: white	;
 			font-size:16px;
@@ -90,18 +107,21 @@
 
 <body class="body">
 	
-	<center>
 
-		<br>
-		<br>
-		<br>
-		<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
 	<div class="minidiv">
 		<br>
 		<br>
 		<button class="boton menu" onclick="location.href='menu.php'">&#127968</button>
 	</div>
+
+	<center>
+
+
 	
 	<div class="div">
 	<br>
@@ -109,23 +129,39 @@
 
 	<table class="tabla" border="2">
 		<tr>
-			<th>ID</th>
-			<th>Nombre</th>
-			<th>Salario por hora</th>
-			<th></th>
-			<th></th>
+			<th class="subtabla encabezado">ID</th>
+			<th class="subtabla encabezado">Nombre</th>
+			<th class="subtabla encabezado ">Salario por hora</th>
+			<th class="subtabla encabezado"></th>
+			<th class="subtabla encabezado"></th>
 		</tr>
 
 
 		<tr>
-			<td align='center' >1</td>
-			<td align='center'>Junior analyst</td>
-			<td align='center'>2000</td>
+			<td class="subtabla" align='center' >1</td>
+			<td class="subtabla" align='center'>Marketing</td>
+			<td class="subtabla" align='center'>2000</td>
 			<!--<td align='center'><a href="EditarPuesto.php?id=<?php #echo "$id&nombre=$nombre&salario=$salario"; ?>">Editar</a></td>-->
-			<td align='center'><button class="emojis" onclick="location.href='EditarPuesto.php?id=<?php echo "$id&nombre=$nombre&salario=$salario"; ?>'">&#9997</button></td>
-			<td align='center'><button class="emojis" onclick="location.href='MostrarPuestos.php?eliminar=<?php echo $id ?>'">&#10060</button></td>
-			</tr>
+			<td class="subtabla" align='center'><button  class="emojis" onclick="location.href='EditarPuesto.php?id=<?php echo "$id&nombre=$nombre&salario=$salario"; ?>'">&#9997</button></td>
+			<td class="subtabla" align='center'><button  class="emojis" onclick="location.href='MostrarPuestos.php?eliminar=<?php echo $id ?>'">&#10060</button></td>
+		</tr>
 
+		<tr>
+			<td class="subtabla" align='center' >1</td>
+			<td class="subtabla" align='center'>Marketing</td>
+			<td class="subtabla" align='center'>2000</td>
+			<!--<td align='center'><a href="EditarPuesto.php?id=<?php #echo "$id&nombre=$nombre&salario=$salario"; ?>">Editar</a></td>-->
+			<td class="subtabla" align='center'><button  class="emojis" onclick="location.href='EditarPuesto.php?id=<?php echo "$id&nombre=$nombre&salario=$salario"; ?>'">&#9997</button></td>
+			<td class="subtabla" align='center'><button  class="emojis" onclick="location.href='MostrarPuestos.php?eliminar=<?php echo $id ?>'">&#10060</button></td>
+		</tr>
+		<tr>
+			<td class="subtabla" align='center' >1</td>
+			<td class="subtabla" align='center'>Marketing</td>
+			<td class="subtabla" align='center'>2000</td>
+			<!--<td align='center'><a href="EditarPuesto.php?id=<?php #echo "$id&nombre=$nombre&salario=$salario"; ?>">Editar</a></td>-->
+			<td class="subtabla" align='center'><button  class="emojis" onclick="location.href='EditarPuesto.php?id=<?php echo "$id&nombre=$nombre&salario=$salario"; ?>'">&#9997</button></td>
+			<td class="subtabla" align='center'><button  class="emojis" onclick="location.href='MostrarPuestos.php?eliminar=<?php echo $id ?>'">&#10060</button></td>
+		</tr>
 	<?php
 	function borrar()
 	{
@@ -142,12 +178,12 @@
 			$salario = $registro['SalarioxHora'];
 	?>
 			<tr>
-			<td align='center' ><?php echo $id ?></td>
-			<td align='center'><?php echo $nombre ?></td>
-			<td align='center'><?php echo $salario ?></td>
+			<td class="subtabla" align='center' ><?php echo $id ?></td>
+			<td class="subtabla" align='center'><?php echo $nombre ?></td>
+			<td class="subtabla" align='center'><?php echo $salario ?></td>
 			<!--<td align='center'><a href="EditarPuesto.php?id=<?php #echo "$id&nombre=$nombre&salario=$salario"; ?>">Editar</a></td>-->
-			<td align='center'><button  class="emojis" onclick="location.href='EditarPuesto.php?id=<?php echo "$id&nombre=$nombre&salario=$salario"; ?>'">&#9997</button></td>
-			<td align='center'><button  class="emojis" onclick="location.href='MostrarPuestos.php?eliminar=<?php echo $id ?>'">&#10060</button></td>
+			<td class="subtabla" align='center'><button  class="emojis" onclick="location.href='EditarPuesto.php?id=<?php echo "$id&nombre=$nombre&salario=$salario"; ?>'">&#9997</button></td>
+			<td class="subtabla" align='center'><button  class="emojis" onclick="location.href='MostrarPuestos.php?eliminar=<?php echo $id ?>'">&#10060</button></td>
 			</tr>
 	<?php
 		}

@@ -16,13 +16,13 @@
 			border-radius: 20px;
 		}
 		.div2{
-			margin: 1px 662px;
+			margin: 3px 662px;
 			width: 470px;
 			height: 100px;
 			background-color: none; 
 		}
 		.minidiv{
-			margin: 0px 1329px;
+			margin: 0px 426px;
 			width: 100px;
 			height: 28px;
 			background-color: none	; 
@@ -78,8 +78,24 @@
 			width: 980px;
 			font-family: Arial;
 			font-size: 15px;
+			border-color: white;
 
 		}
+
+		.subtabla{
+			background-color: white; 
+			margin: 0px 0px;
+			border-color: black;
+			border-width: 0px;
+		}
+
+		.encabezado{
+			background-color:#FFDA63;
+			border-color: black;
+			border-width: 0px;
+			
+		}
+
 		.emojis{
 			border-color: white	;
 			font-size:18px;
@@ -91,13 +107,14 @@
 
 <body class = "body">
 	
-	<center>
-	
 	<div class="minidiv">
 		<br>
 		<br>
 		<button class="boton menu" onclick="location.href='menu.php'">&#127968</button>
 	</div>
+	<center>
+	
+
 	<div class="div">
 		<br>
 		<h1 class="h2">Lista de empleados registrados</h1>	
@@ -109,15 +126,15 @@
 			<table class="tabla" border="2">
 			<br>
 		<tr>
-			<th>ID</th>
-            <th>Tipo de identificación</th>
-            <th>Identificación</th>
-			<th>Nombre</th>
-			<th>Fecha de nacimiento</th>
-            <th>Puesto</th>
-            <th>Departamento</th>
-            <th>....</th>
-            <th>....</th>
+			<th class="subtabla encabezado">ID</th>
+            <th class="subtabla encabezado">Tipo de identificación</th>
+            <th class="subtabla encabezado">Identificación</th>
+			<th class="subtabla encabezado">Nombre</th>
+			<th class="subtabla encabezado">Fecha de nacimiento</th>
+            <th class="subtabla encabezado">Puesto</th>
+            <th class="subtabla encabezado" >Departamento</th>
+            <th class="subtabla encabezado" >....</th>
+            <th class="subtabla encabezado" >....</th>
 		</tr>
 
 
@@ -147,15 +164,15 @@
             $departamento = $registro['NombreDept']
 	?>
 			<tr>
-			<td align='center' ><?php echo $id ?></td>
-			<td align='center'><?php echo $tipoDoc ?></td>
-			<td align='center'><?php echo $identificacion ?></td>
-			<td align='center'><?php echo $nombre ?></td>
-			<td align='center'><?php echo $fecha ?></td>
-            <td align='center'><?php echo $puesto ?></td>
-            <td align='center'><?php echo $departamento ?></td>
-			<td align='center'><button class="emojis" onclick="location.href='EditarEmpleado.php?id=<?php echo "$id&tipo=$tipoDoc&identificacion=$identificacion&nombre=$nombre&puesto=$puesto&dep=$departamento&fecha=$fecha"; ?>'">&#9997</button></td>
-			<td align='center'><button class="emojis"> onclick="location.href='MostrarEmpleados.php?eliminar=<?php echo $id ?>'">&#10060</button></td>
+			<td class="subtabla"  align='center' ><?php echo $id ?></td>
+			<td class="subtabla"  align='center'><?php echo $tipoDoc ?></td>
+			<td class="subtabla"  align='center'><?php echo $identificacion ?></td>
+			<td class="subtabla"  align='center'><?php echo $nombre ?></td>
+			<td class="subtabla"  align='center'><?php echo $fecha ?></td>
+            <td class="subtabla"  align='center'><?php echo $puesto ?></td>
+            <td class="subtabla"  align='center'><?php echo $departamento ?></td>
+			<td class="subtabla"   align='center'><button class="emojis" onclick="location.href='EditarEmpleado.php?id=<?php echo "$id&tipo=$tipoDoc&identificacion=$identificacion&nombre=$nombre&puesto=$puesto&dep=$departamento&fecha=$fecha"; ?>'">&#9997</button></td>
+			<td class="subtabla"  align='center'><button class="emojis"> onclick="location.href='MostrarEmpleados.php?eliminar=<?php echo $id ?>'">&#10060</button></td>
 			</tr>
             
 	<?php
