@@ -6,21 +6,98 @@
 	<title>Empleados</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta name="generator" content="Geany 1.36" />
+	<style >
+
+		.div{
+			margin: auto;
+			width: 800px;
+			height: 800px;
+			background-color: white; 
+			border-radius: 20px;
+		}
+		.div2{
+			margin: auto;
+			width: 390px;
+			height: 100px;
+			background-color: white; 
+		}
+
+		.body {
+  			background: #EC610B;
+ 			 min-height: 100vh;
+		}
+
+		.h2 {
+  			text-align: center;
+  			margin: 0px auto;
+  			margin-bottom: 10px;
+  			color: black;
+  			font-family: Arial Black;
+		}
+
+		.barra{
+			width: 400px;
+			height: 18px;
+		}
+
+		.input{
+			background-color: #FFDA63;
+             border: none;
+             color: black;
+             padding: 6px 15px;
+             text-align: center;
+             text-decoration: none;
+             display: inline-block;  
+             font-size:15px;
+             font-family: Arial;
+  			 border-radius: 20px;
+
+             margin: 0px auto;
+		}
+
+		.tabla{
+			width: 750px;
+			font-family: Arial;
+			font-size: 15px;
+
+		}
+
+		.boton{
+             background-color: #FFDA63;
+             border: none;
+             color: black;
+             padding: 15px 32px;
+             text-align: center;
+             text-decoration: none;
+             display: inline-block;  
+             font-size:15px;
+             font-family: Arial;
+  			 border-radius: 20px;
+
+             margin: 0px auto;
+         }
+
+
+
+	</style>
 </head>
 
-<body>
-	<button onclick="location.href='index.php'">Menú</button>
+<body class = "body">
+	<button class="boton" onclick="location.href='menu.php'">Menú</button>
 	<center>
 	
-	<h1>Lista de empleados registrados</h1>	
+	<br><br><br>
+	<div class="div">
+		<br>
+		<h1 class="h2">Lista de empleados registrados</h1>	
 
-	<form action="" method="post">
-		<input value="" maxlength="40" type="text" name="str">
-		<input value="Filtrar" type="submit" name="Filtrar"><br>
-	</form>
+		<form action="" method="post">
+			<input class="barra" value="" maxlength="40" type="text" name="str">
+			<input class= "input" value="Filtrar" type="submit" name="Filtrar"><br>
+		</form>
 
-
-	<table border="2">
+			<br>
+			<table class="tabla" border="2">
 		<tr>
 			<th>ID</th>
             <th>Tipo de identificación</th>
@@ -29,9 +106,15 @@
 			<th>Fecha de nacimiento</th>
             <th>Puesto</th>
             <th>Departamento</th>
-			<th></th>
-			<th></th>
+            <th>....</th>
+            <th>....</th>
 		</tr>
+
+	
+	
+
+
+
 
 	<?php
 		$conn = include 'Conexion.php';
@@ -99,11 +182,11 @@
 		}
 		
 		
-		
 	?>
-	</table>
-    <button onclick="location.href='AddEmpleado.php'">Agregar Empleado</button><br>
-	</center>
+		</table>
+    	<button onclick="location.href='AddEmpleado.php'">Agregar Empleado</button><br>
+		</center>
+	</div>
 </body>
 
 </html>

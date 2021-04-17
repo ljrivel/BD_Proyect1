@@ -12,10 +12,11 @@
 			width: 500px;
 			height: 200px;
 			background-color: white; 
+			 border-radius: 20px;
 		}
 		.div2{
 			margin: auto;
-			width: 390px;
+			width: 400px;
 			height: 100px;
 			background-color: white; 
 		}
@@ -29,18 +30,9 @@
   			text-align: center;
   			margin: 0px auto;
   			margin-bottom: 10px;
-  			color: rgba(0, 0, 0, 0.5);
   			font-family: Arial Black;
 		}
 
-		.form {
- 			 margin: auto;
-  			width: 50%;
-  			max-width: 500px;
-  			background: #F3F3F3;
-  			padding: 20px;
-  			border: 1px solid rgba(0, 0, 0, 0.2);
-		}
 
 		.boton{
              background-color: #FFDA63;
@@ -50,10 +42,9 @@
              text-align: center;
              text-decoration: none;
              display: inline-block;  
-             font-size:22px;
-             font-family: Arial;
+             font-size:20px;
+             font-family: Arial Black;
   			 border-radius: 20px;
-
              margin: 0px auto;
          }
 		.botonAzul{
@@ -71,7 +62,7 @@
 	<br>
 	<br>
 	<br>
-	<br>
+	<br> <br> <br> <br>
 	<div class="div">
 	    	<br>
        		<h2 class="h2">Menú Principal</h2>
