@@ -77,7 +77,7 @@
 		select {
   			display: block;
   			padding: 6px;
-  			width: 84%;
+  			width: 74%;
   			margin: 0px auto;
   			font-size: 15px;
 		}
@@ -85,7 +85,7 @@
 		input {
   			display: block;
   			padding: 6px;
-  			width: 80%;
+  			width: 70%;
   			margin: 0px auto;
   			font-size: 15px;
 		}
@@ -96,7 +96,7 @@
   			color: black;
   			opacity: 0.8;
   			cursor: pointer;
-   			font-family: Arial;
+   			font-family: Arial black;
   			border-radius: 20px;
   			margin-bottom: 0;
 		}
@@ -115,6 +115,9 @@
 
 <body class="body">
 
+	<br>
+	<br>
+	<br>
 	<br>
 	<br>
 	<br>
@@ -143,15 +146,16 @@
 			<br><br>
 			
 			Identificación:<br>
-			<input maxlength="20" placeHolder="Identificación" type="number" name="valorDocId" required/><br><br>
+			<input maxlength="20" placeHolder="&#128179 Identificación" type="number" name="valorDocId" required/><br><br>
 			
 			Nombre completo:<br>
-			<input maxlength="64" placeHolder="Nombre completo" type="text" name="nombre" required/><br><br>
+			<input maxlength="64" placeHolder="&#X1F464 Nombre completo" type="text" name="nombre" required/><br><br>
 
-			Fecha de nacimiento<br><input type="date" name="fechaNacimiento" pattern="\d{4}/\d{2}/\d{2}" required\><br><br> <!--pattern="\d{4}-\d{2}-\d{2}"-->
+			Fecha de nacimiento<br>
+			<input type="date" name=" fechaNacimiento" pattern="\d{4}/\d{2}/\d{2}" required\><br><br> <!--pattern="\d{4}-\d{2}-\d{2}"-->
 			
 			Puesto:<br>
-			<select name="puesto" id="puesto">
+			<select name="puesto"  id="puesto">
 				<?php
 				$query = 'EXEC dbo.Mostrar_Puestos';
 				$exec = sqlsrv_query($conn, $query);
