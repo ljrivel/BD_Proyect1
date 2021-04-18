@@ -172,7 +172,7 @@
             <td class="subtabla"  align='center'><?php echo $puesto ?></td>
             <td class="subtabla"  align='center'><?php echo $departamento ?></td>
 			<td class="subtabla"   align='center'><button class="emojis" onclick="location.href='EditarEmpleado.php?id=<?php echo "$id&tipo=$tipoDoc&identificacion=$identificacion&nombre=$nombre&puesto=$puesto&dep=$departamento&fecha=$fecha"; ?>'">&#9997</button></td>
-			<td class="subtabla"  align='center'><button class="emojis"> onclick="location.href='MostrarEmpleados.php?eliminar=<?php echo $id ?>'">&#10060</button></td>
+			<td class="subtabla"  align='center'><button class="emojis" onclick="location.href='MostrarEmpleados.php?eliminar=<?php echo $id ?>'">&#10060</button></td>
 			</tr>
             
 	<?php

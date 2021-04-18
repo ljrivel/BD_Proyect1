@@ -6,16 +6,131 @@
 	<title>Agregar Empleado</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta name="generator" content="Geany 1.36" />
+
+	<style >
+
+		.body {
+  			background: #EC610B;
+ 			 min-height: 100vh;
+		}
+
+		form {
+  			margin: auto;
+ 			width: 50%;
+  			max-width: 500px;
+  			background: #F3F3F3;
+  			padding: 20px;
+  			border: 1px solid rgba(0, 0, 0, 0.2);
+  			border-radius: 20px;
+		}
+
+		.h1 {
+  			text-align: center;
+  			margin: 0px auto;
+  			margin-bottom: 10px;
+  			  color: rgba(0, 0, 0, 0.8);
+  			font-family: Arial Black;
+		}
+
+		.barra{
+			width: 880px;
+			height: 18px;
+		}
+
+		.boton{
+			background-color: #FFDA63;
+             color: black;
+             border-color: rgba(0, 0, 0, 0.5);
+             padding: 1px 15px;
+             text-align: center;
+             text-decoration: none;
+             display: inline-block;  
+             font-size:15px;
+             font-family: Arial black;
+  			 border-radius: 8px;
+
+             margin: 0px auto;
+		}
+
+		.agregar{
+			font-size:17px;
+			padding: 1px 16px;
+		}
+
+		.menu{
+			padding: 0px 25px;
+			font-size:25px;
+			background-color: #09CA76;
+		}
+
+		.tabla{
+			width: 980px;
+			font-family: Arial;
+			font-size: 15px;
+
+		}
+		.emojis{
+			border-color: white	;
+			font-size:18px;
+			background-color: white; 
+		}
+
+
+		select {
+  			display: block;
+  			padding: 6px;
+  			width: 74%;
+  			margin: 0px auto;
+  			font-size: 15px;
+		}
+
+		input {
+  			display: block;
+  			padding: 6px;
+  			width: 70%;
+  			margin: 0px auto;
+  			font-size: 15px;
+		}
+
+		input[type="submit"] {
+  			background: linear-gradient(#FFDA63, #FFB940);
+  			border: 0;
+  			color: black;
+  			opacity: 0.8;
+  			cursor: pointer;
+   			font-family: Arial black;
+  			border-radius: 20px;
+  			margin-bottom: 0;
+		}
+
+		input[type="submit"]:hover {
+  			opacity: 1;
+		}
+
+		input[type="submit"]:active {
+  			transform: scale(0.95);	
+		}
+
+
+	</style>
+
 </head>
 
-<body>
+<body class="body">
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+
 	<center>
 		<?php
 		$conn = include "Conexion.php";
 		?>
 		<form action="" method="post">
 		<!--Se debe agregar un while para añadir las opciones-->
-			<h1>Editar empleado</h1>
+			<h1 class=" h1" >Editar empleado</h1>
 			Tipo de identificación:<br>
 			<select name="tipoDocId" id="tipoDocId">
 			<?php

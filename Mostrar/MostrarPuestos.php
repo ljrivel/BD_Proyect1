@@ -137,31 +137,6 @@
 		</tr>
 
 
-		<tr>
-			<td class="subtabla" align='center' >1</td>
-			<td class="subtabla" align='center'>Marketing</td>
-			<td class="subtabla" align='center'>2000</td>
-			<!--<td align='center'><a href="EditarPuesto.php?id=<?php #echo "$id&nombre=$nombre&salario=$salario"; ?>">Editar</a></td>-->
-			<td class="subtabla" align='center'><button  class="emojis" onclick="location.href='EditarPuesto.php?id=<?php echo "$id&nombre=$nombre&salario=$salario"; ?>'">&#9997</button></td>
-			<td class="subtabla" align='center'><button  class="emojis" onclick="location.href='MostrarPuestos.php?eliminar=<?php echo $id ?>'">&#10060</button></td>
-		</tr>
-
-		<tr>
-			<td class="subtabla" align='center' >1</td>
-			<td class="subtabla" align='center'>Marketing</td>
-			<td class="subtabla" align='center'>2000</td>
-			<!--<td align='center'><a href="EditarPuesto.php?id=<?php #echo "$id&nombre=$nombre&salario=$salario"; ?>">Editar</a></td>-->
-			<td class="subtabla" align='center'><button  class="emojis" onclick="location.href='EditarPuesto.php?id=<?php echo "$id&nombre=$nombre&salario=$salario"; ?>'">&#9997</button></td>
-			<td class="subtabla" align='center'><button  class="emojis" onclick="location.href='MostrarPuestos.php?eliminar=<?php echo $id ?>'">&#10060</button></td>
-		</tr>
-		<tr>
-			<td class="subtabla" align='center' >1</td>
-			<td class="subtabla" align='center'>Marketing</td>
-			<td class="subtabla" align='center'>2000</td>
-			<!--<td align='center'><a href="EditarPuesto.php?id=<?php #echo "$id&nombre=$nombre&salario=$salario"; ?>">Editar</a></td>-->
-			<td class="subtabla" align='center'><button  class="emojis" onclick="location.href='EditarPuesto.php?id=<?php echo "$id&nombre=$nombre&salario=$salario"; ?>'">&#9997</button></td>
-			<td class="subtabla" align='center'><button  class="emojis" onclick="location.href='MostrarPuestos.php?eliminar=<?php echo $id ?>'">&#10060</button></td>
-		</tr>
 	<?php
 	function borrar()
 	{
