@@ -148,12 +148,12 @@
 			<br><br>
 			
 			Identificación:<br>
-			<input maxlength="20" value="<?php echo $_GET['identificacion']?>" type="number" name="valorDocId" required/><br><br>
+			<input maxlength="9" value="<?php echo $_GET['identificacion']?>" type="number" name="valorDocId" required/><br><br>
 			
 			Nombre completo:<br>
 			<input maxlength="64" value="<?php echo $_GET['nombre']?>" type="text" name="nombre" required/><br><br>
 
-			Fecha de nacimiento<br><input type="date" name="fechaNacimiento" pattern="\d{4}/\d{2}/\d{2}" required\><br><br> <!--pattern="\d{4}-\d{2}-\d{2}"-->
+			Fecha de nacimiento<br><input type="date" name="fechaNacimiento" pattern="\d{4}/\d{2}/\d{2}" required/><br><br> <!--pattern="\d{4}-\d{2}-\d{2}"-->
 			
 			Puesto:<br>
 			<select name="puesto" id="puesto">
@@ -220,7 +220,7 @@
 				echo "Nacimiento: $fechaNacimiento <br>";
 				*/
 
-				header("Location: MostrarEmpleados.php");
+				echo "<script> ; window.location='MostrarEmpleados.php' </script>";
 			}
 
 

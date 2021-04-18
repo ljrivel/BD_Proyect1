@@ -132,8 +132,8 @@
 			<th class="subtabla encabezado">ID</th>
 			<th class="subtabla encabezado">Nombre</th>
 			<th class="subtabla encabezado ">Salario por hora</th>
-			<th class="subtabla encabezado"></th>
-			<th class="subtabla encabezado"></th>
+			<th class="subtabla encabezado">....</th>
+			<th class="subtabla encabezado">....</th>
 		</tr>
 
 
@@ -171,7 +171,7 @@
 
 			$exec = sqlsrv_query($conn, $query);
 
-			header("Location: MostrarPuestos.php");
+			echo "<script> ; window.location='MostrarPuestos.php' </script>";
 		}
 	?>
 	</table>

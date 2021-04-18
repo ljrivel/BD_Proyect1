@@ -146,13 +146,13 @@
 			<br><br>
 			
 			Identificación:<br>
-			<input maxlength="20" placeHolder="&#128179 Identificación" type="number" name="valorDocId" required/><br><br>
+			<input max="999999999" placeHolder="&#128179 Identificación" type="number" name="valorDocId" required/><br><br>
 			
 			Nombre completo:<br>
 			<input maxlength="64" placeHolder="&#X1F464 Nombre completo" type="text" name="nombre" required/><br><br>
 
 			Fecha de nacimiento<br>
-			<input type="date" name=" fechaNacimiento" pattern="\d{4}/\d{2}/\d{2}" required\><br><br> <!--pattern="\d{4}-\d{2}-\d{2}"-->
+			<input type="date" name=" fechaNacimiento" pattern="\d{4}/\d{2}/\d{2}" required/><br><br> <!--pattern="\d{4}-\d{2}-\d{2}"-->
 			
 			Puesto:<br>
 			<select name="puesto"  id="puesto">
@@ -213,7 +213,7 @@
 				echo "Nacimiento: $fechaNacimiento <br>";
 				*/
 
-				header("Location: MostrarEmpleados.php");
+				echo "<script> ; window.location='MostrarEmpleados.php' </script>";
 			}
 
 

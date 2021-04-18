@@ -160,7 +160,7 @@
                 #echo "$query";
 
                 $exec = sqlsrv_query($conn, $query);
-                header("Location: MostrarPuestos.php");
+                echo "<script> ; window.location='MostrarPuestos.php' </script>";
 			}
 
             

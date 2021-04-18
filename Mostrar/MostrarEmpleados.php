@@ -119,7 +119,7 @@
 		<br>
 		<h1 class="h2">Lista de empleados registrados</h1>	
 
-		<form action="" method="post">
+		<form method="post">
 			<input class="barra" value="" maxlength="40" type="text" name="str">
 			<input class= "boton" value="Filtrar" type="submit" name="Filtrar"><br>
 		</form>
@@ -127,9 +127,9 @@
 			<br>
 		<tr>
 			<th class="subtabla encabezado">ID</th>
+			<th class="subtabla encabezado">Nombre</th>
             <th class="subtabla encabezado">Tipo de identificación</th>
             <th class="subtabla encabezado">Identificación</th>
-			<th class="subtabla encabezado">Nombre</th>
 			<th class="subtabla encabezado">Fecha de nacimiento</th>
             <th class="subtabla encabezado">Puesto</th>
             <th class="subtabla encabezado" >Departamento</th>
@@ -145,10 +145,12 @@
 
 			$str = $_GET['filtrar'];
 			$query = "EXEC dbo.Filtrar_Empleados $str";
+
 		}
 		else{
 			$query = 'EXEC dbo.Mostrar_Empleados';
 		}
+
 
 
 		
@@ -164,10 +166,11 @@
             $departamento = $registro['NombreDept']
 	?>
 			<tr>
+
 			<td class="subtabla"  align='center' ><?php echo $id ?></td>
+			<td class="subtabla"  align='center'><?php echo $nombre ?></td>
 			<td class="subtabla"  align='center'><?php echo $tipoDoc ?></td>
 			<td class="subtabla"  align='center'><?php echo $identificacion ?></td>
-			<td class="subtabla"  align='center'><?php echo $nombre ?></td>
 			<td class="subtabla"  align='center'><?php echo $fecha ?></td>
             <td class="subtabla"  align='center'><?php echo $puesto ?></td>
             <td class="subtabla"  align='center'><?php echo $departamento ?></td>
@@ -186,7 +189,7 @@
 
 			$exec = sqlsrv_query($conn, $query);
 
-			header("Location: MostrarEmpleados.php");
+			echo "<script> ; window.location='MostrarEmpleados.php' </script>";
 		}
 
 		if(isset($_POST['Filtrar']))
@@ -194,10 +197,12 @@
 			$str = $_POST['str'];
 
 			if ($str != ""){
-				header("Location: MostrarEmpleados.php?filtrar=$str");
+
+				echo "<script> ; window.location='MostrarEmpleados.php?filtrar=$str' </script>";
+				
 			}
 			else{
-				header("Location: MostrarEmpleados.php");
+				echo "<script> ; window.location='MostrarEmpleados.php' </script>";
 			}
 			
 			#echo "Se buscará $str";
