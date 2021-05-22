@@ -166,7 +166,7 @@
 		{
 			$id = $_GET['eliminar'];
 			
-			$query = "EXEC Borrar_Puesto $id";
+			$query = "EXEC Borrar_Puesto $id, 0 ";
 
 			$exec = sqlsrv_query($conn, $query);
 

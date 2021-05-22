@@ -14,10 +14,10 @@
 
 <body>
 <form method="POST">
-<h2>Iniciar sesión</h2>
-<input type="text" placeholder="&#128273; Usuario" name="usuario" required>
-<input type="password" placeholder="&#128274; Contraseña" name="pass" required>
-<input type="submit" name="Ingresar" value="Ingresar">
+	<h2>Iniciar sesión</h2>
+	<input type="text" placeholder="&#128273; Usuario" name="usuario" required>
+	<input type="password" placeholder="&#128274; Contraseña" name="pass" required>
+	<input type="submit" name="Ingresar" value="Ingresar">
 </form>
 
 <?php
@@ -32,25 +32,41 @@
 		$username = $_POST['usuario'];
 		$pass = $_POST['pass'];
 
-		$query = "EXEC Datos_Usuarios $username, $pass";
+		$query = "EXEC LogInEmpleado $username, $pass, 0";
 
 		$exec = sqlsrv_query($conn, $query);
 
 		$registro = sqlsrv_fetch_array($exec);
-
-		if($registro[0] == 1){
-			?>
-			<script language="JavaScript">
-				window.location='menu.php'
-			</script>
-			<?php
+		echo $registro[0];
+		
+		try 
+		{
+			if($registro != null && count($registro) > 0)
+			{
+				//echo $registro['Id'];
+				
+				?>
+				<script language="JavaScript">
+					window.location='MenuPrincipalEmpleado.php?id=<?php echo $registro['Id'] ?>'
+				</script>
+				<?php
+				
+			}
+			else
+			{
+				?>
+				<script language="JavaScript">
+					alert('Datos incorrectos, intente de nuevo');
+				</script>
+				<?php
+			}
 		}
-
-		else{
+		catch (Exception $e)
+		{
 			?>
-			<script language="JavaScript">
-				alert('Datos incorrectos, intente de nuevo');
-			</script>
+				<script language="JavaScript">
+					alert('Datos incorrectos, intente de nuevo');
+				</script>
 			<?php
 		}
 	}
