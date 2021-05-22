@@ -21,7 +21,7 @@
 			background-color: none; 
 		}
 		.minidiv{
-			margin: 0px 638px;
+			margin: 0px 380px;
 			width: 100px;
 			height: 28px;
 			background-color: none; 
@@ -138,11 +138,10 @@
 
 
 	<?php
-	function borrar()
-	{
-		echo "Hola";
-	}
-		$conn = include 'Conexion.php';
+		include 'Conexion.php';
+
+		$conexion = Conexion::conectar();
+		$conn = $conexion::$con;
 		
 		$query = 'EXEC dbo.Mostrar_Puestos';
 		$exec = sqlsrv_query($conn, $query);

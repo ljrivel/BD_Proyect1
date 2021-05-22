@@ -126,7 +126,10 @@
 
 	<center>
 		<?php
-		$conn = include "Conexion.php";
+		include 'Conexion.php';
+
+		$conexion = Conexion::conectar();
+		$conn = $conexion::$con;
 		?>
 		<form action="" method="post">
 		<!--Se debe agregar un while para añadir las opciones-->

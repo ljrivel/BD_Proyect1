@@ -125,7 +125,10 @@
 	<br>
 	<center>
 		<?php
-		$conn = include "Conexion.php";
+		include 'Conexion.php';
+
+		$conexion = Conexion::conectar();
+		$conn = $conexion::$con;
     
         $id = $_GET['id'];
         

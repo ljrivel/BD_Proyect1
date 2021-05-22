@@ -126,7 +126,10 @@
 		<br>
 		<br>	
 		<?php
-		$conn = include "Conexion.php";
+			include 'Conexion.php';
+
+			$conexion = Conexion::conectar();
+			$conn = $conexion::$con;
         
 		?>
 		<form action="" method="post">

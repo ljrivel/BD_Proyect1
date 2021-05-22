@@ -22,7 +22,7 @@
 			background-color: none; 
 		}
 		.minidiv{
-			margin: 0px 426px;
+			margin: 0px 175px;
 			width: 100px;
 			height: 28px;
 			background-color: none	; 
@@ -139,7 +139,10 @@
 
 
 	<?php
-		$conn = include 'Conexion.php';
+		include 'Conexion.php';
+
+		$conexion = Conexion::conectar();
+		$conn = $conexion::$con;
 		$query = "";
 		if (isset($_GET['filtrar'])){
 
@@ -150,9 +153,6 @@
 		else{
 			$query = 'EXEC dbo.Mostrar_Empleados';
 		}
-
-
-
 		
 		$exec = sqlsrv_query($conn, $query);
 		

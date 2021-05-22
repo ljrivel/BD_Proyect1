@@ -139,7 +139,11 @@
 
 
 	<?php
-		$conn = include 'Conexion.php';
+		include 'Conexion.php';
+
+		$conexion = Conexion::conectar();
+		$conn = $conexion::$con;
+		
 		$query = "";
 		if (isset($_GET['filtrar'])){
 
