@@ -106,25 +106,23 @@
 </head>
 
 <body class = "body">
-	
-	<div class="minidiv">
-		<br>
-		<br>
-		<button class="boton menu" onclick="location.href='MenuPrincipalEmpleado.php?id=0'">&#127968</button>
-	</div>
 	<center>
 	
 
 	<div class="div">
 		<br>
-		<h1 class="h2">Últimos meses</h1>	
+		<h1 class="h2">Últimas semanas</h1>	
 
 			<table class="tabla" border="2">
 			<br>
 		<tr>
 			<th class="subtabla encabezado">Salario Bruto</th>
+			<th class="subtabla encabezado">Deducciones</th>
 			<th class="subtabla encabezado">Salario Neto</th>
-            <th class="subtabla encabezado">Total deducciones</th>
+			<th class="subtabla encabezado">Horas Ordinarias</th>
+			<th class="subtabla encabezado">Horas Extra Normales</th>
+			<th class="subtabla encabezado">Horas Extra Dobles</th>
+            
 		</tr>
 
 
@@ -138,7 +136,7 @@
 		if (isset($_GET['id'])){
 
 			$idEmpleado = $_GET['id'];
-			$query = "EXEC dbo.ConsultarMeses $idEmpleado, 0";
+			$query = "EXEC dbo.ConsultarSemanas $idEmpleado, 0";
 
 		}
 		
@@ -147,27 +145,33 @@
 		while ($registro = sqlsrv_fetch_array($exec)){
 			$salarioBruto = $registro['SalarioBruto'];
             $salarioNeto = $registro['SalarioNeto'];
-            $deducciones = $registro['TotalDeducciones'];
-            $idMesPlanilla = $registro['IdMesPlanilla'];
+            $deducciones = $registro['Deducciones'];
+            $idSemanaPlanilla = $registro['Id'];
+			$horasOrdinarias = $registro['HorasOrdinarias'];
+			$horasExtraNormales = $registro['HorasExtraNormales'];
+			$horasExtraDobles = $registro['HorasExtraDobles']
 	?>
 			<tr>
-
-			<td class="subtabla"  align='center' ><?php echo $salarioBruto ?></td>
+			
+			<td>
+			<button class="subtabla" align='center' onclick="location.href='MostrarDetallesSemanaPlanilla.php?id=<?php echo "$idEmpleado&idSemanaPlanilla=$idSemanaPlanilla"; ?>'"; ?><?php echo $salarioBruto ?></button>
+			</td>
+			<td>
+			<button class="subtabla" align='center' onclick="location.href='MostrarDeduccionesSemanaPlanilla.php?id=<?php echo "$idSemanaPlanilla"; ?>'"; ?><?php echo $deducciones ?></button>
+			</td>
             <td class="subtabla"  align='center' ><?php echo $salarioNeto ?></td>
-			<td class="subtabla"  align='center'>
-            <button class="emojis" onclick="location.href='MostrarDeduccionesMes.php?id=<?php echo "$idEmpleado&idMes=$idMesPlanilla"; ?>'"; ?><?php echo $deducciones ?></button></td>
+			<td class="subtabla"  align='center' ><?php echo $horasOrdinarias?></td>
+			<td class="subtabla"  align='center' ><?php echo $horasExtraNormales ?></td>
+			<td class="subtabla"  align='center' ><?php echo $horasExtraDobles ?></td>
             </tr>
             
 	<?php
 		}    
-
 	?>
 		</table>
     	<br>
 		</center>
 	</div>
-
-		
 
 </body>
 

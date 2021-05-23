@@ -87,9 +87,9 @@
        		 <br>
         	<div class="div2">
         		<br>
-        		<button class="boton" onclick="location.href='MostrarMesesPlanilla.php?id=<?php echo $idEmpleado ?>'">&#128188 Mes</button>
+        		<button class="boton" onclick="location.href='MostrarMesesPlanilla.php?id=<?php echo $idEmpleado ?>'">&#128188Mes</button>
 
-        		<button class="boton botonAzul" onclick="location.href='MostrarEmpleados.php'">&#128119Empleados</button>
+        		<button class="boton botonAzul" onclick="location.href='MostrarSemanasPlanilla.php?id=<?php echo $idEmpleado ?>'">&#128119Semanas</button>
     	</div>
     </div>
 	

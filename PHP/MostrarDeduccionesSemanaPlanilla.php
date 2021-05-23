@@ -106,25 +106,20 @@
 </head>
 
 <body class = "body">
-	
-	<div class="minidiv">
-		<br>
-		<br>
-		<button class="boton menu" onclick="location.href='MenuPrincipalEmpleado.php?id=0'">&#127968</button>
-	</div>
 	<center>
 	
 
 	<div class="div">
 		<br>
-		<h1 class="h2">Últimos meses</h1>	
+		<h1 class="h2">Últimas semanas</h1>	
 
 			<table class="tabla" border="2">
 			<br>
 		<tr>
-			<th class="subtabla encabezado">Salario Bruto</th>
-			<th class="subtabla encabezado">Salario Neto</th>
-            <th class="subtabla encabezado">Total deducciones</th>
+			<th class="subtabla encabezado">Deducción</th>
+			<th class="subtabla encabezado">Porcentaje aplicado</th>
+			<th class="subtabla encabezado">Monto aplicado</th>
+            
 		</tr>
 
 
@@ -134,40 +129,39 @@
 		$conexion = Conexion::conectar();
 		$conn = $conexion::$con;
 		$query = "";
-        $idEmpleado = 0;
 		if (isset($_GET['id'])){
 
-			$idEmpleado = $_GET['id'];
-			$query = "EXEC dbo.ConsultarMeses $idEmpleado, 0";
+			$idSemanaPlanilla = $_GET['id'];
+			$query = "EXEC dbo.MostrarDeduccionesXSemenaPlanilla $idSemanaPlanilla, 0";
 
 		}
 		
 		$exec = sqlsrv_query($conn, $query);
 		
 		while ($registro = sqlsrv_fetch_array($exec)){
-			$salarioBruto = $registro['SalarioBruto'];
-            $salarioNeto = $registro['SalarioNeto'];
-            $deducciones = $registro['TotalDeducciones'];
-            $idMesPlanilla = $registro['IdMesPlanilla'];
+			$nombre = $registro['NombreDeduccion'];
+            $porcentajeAplicado = $registro['PorcentajeAplicado'];
+            $montoAplicado = $registro['MontoAplicado'];
+
+            if ($porcentajeAplicado = null)
+            {
+                $porcentajeAplicado = 'No aplica';
+            }
 	?>
 			<tr>
-
-			<td class="subtabla"  align='center' ><?php echo $salarioBruto ?></td>
-            <td class="subtabla"  align='center' ><?php echo $salarioNeto ?></td>
-			<td class="subtabla"  align='center'>
-            <button class="emojis" onclick="location.href='MostrarDeduccionesMes.php?id=<?php echo "$idEmpleado&idMes=$idMesPlanilla"; ?>'"; ?><?php echo $deducciones ?></button></td>
+			
+            <td class="subtabla"  align='center' ><?php echo $nombre ?></td>
+			<td class="subtabla"  align='center' ><?php echo $porcentajeAplicado ?></td>
+			<td class="subtabla"  align='center' ><?php echo $montoAplicado ?></td>
             </tr>
             
 	<?php
 		}    
-
 	?>
 		</table>
     	<br>
 		</center>
 	</div>
-
-		
 
 </body>
 
