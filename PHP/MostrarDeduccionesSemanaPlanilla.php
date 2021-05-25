@@ -116,6 +116,7 @@
 			<table class="tabla" border="2">
 			<br>
 		<tr>
+			<th class="subtabla encabezado">Fecha</th>
 			<th class="subtabla encabezado">Deducción</th>
 			<th class="subtabla encabezado">Porcentaje aplicado</th>
 			<th class="subtabla encabezado">Monto aplicado</th>
@@ -141,14 +142,15 @@
 
 		while ($registro = sqlsrv_fetch_array($exec)){
 			
+			$fecha = $registro['Fecha']->format('(D) d-M-Y');
 			$nombre = $registro['NombreDeduccion'];
             $porcentajeAplicado = $registro['PorcentajeAplicado'];
             $montoAplicado = $registro['MontoAplicado'];
 	?>
 			<tr>
-			
+			<td class="subtabla"  align='center' ><?php echo $fecha ?></td>
             <td class="subtabla"  align='center' ><?php echo $nombre ?></td>
-			<td class="subtabla"  align='center' ><?php echo "$porcentajeAplicado%" ?></td>
+			<td class="subtabla"  align='center' ><?php echo "$porcentajeAplicado" ?></td>
 			<td class="subtabla"  align='center' ><?php echo $montoAplicado ?></td>
             </tr>
             

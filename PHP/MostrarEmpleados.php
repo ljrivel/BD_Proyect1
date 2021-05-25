@@ -167,7 +167,7 @@
 	?>
 			<tr>
 
-			<td class="subtabla"  align='center' ><?php echo $id ?></td>
+			<td class="subtabla"   align='center'><button class="emojis" onclick="location.href='MenuPrincipalEmpleado.php?id=<?php echo "$id"; ?>'"><?php echo $id ?></button></td>
 			<td class="subtabla"  align='center'><?php echo $nombre ?></td>
 			<td class="subtabla"  align='center'><?php echo $tipoDoc ?></td>
 			<td class="subtabla"  align='center'><?php echo $identificacion ?></td>
