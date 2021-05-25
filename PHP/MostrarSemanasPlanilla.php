@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-	<title>Empleados</title>
+	<title>Semanas Planilla</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta name="generator" content="Geany 1.36" />
 	<style >
@@ -116,6 +116,8 @@
 			<table class="tabla" border="2">
 			<br>
 		<tr>
+			<th class="subtabla encabezado">Inicio</th>
+			<th class="subtabla encabezado">Fin</th>
 			<th class="subtabla encabezado">Salario Bruto</th>
 			<th class="subtabla encabezado">Deducciones</th>
 			<th class="subtabla encabezado">Salario Neto</th>
@@ -143,6 +145,8 @@
 		$exec = sqlsrv_query($conn, $query);
 		
 		while ($registro = sqlsrv_fetch_array($exec)){
+			$fechaInicio = $registro['FechaInicio']->format('d-M-Y');
+			$fechaFin = $registro['FechaFin']->format('d-M-Y');
 			$salarioBruto = $registro['SalarioBruto'];
             $salarioNeto = $registro['SalarioNeto'];
             $deducciones = $registro['Deducciones'];
@@ -152,7 +156,8 @@
 			$horasExtraDobles = $registro['HorasExtraDobles']
 	?>
 			<tr>
-			
+			<td class="subtabla"  align='center' ><?php echo $fechaInicio ?></td>
+			<td class="subtabla"  align='center' ><?php echo $fechaFin ?></td>
 			<td>
 			<button class="subtabla" align='center' onclick="location.href='MostrarDetallesSemanaPlanilla.php?id=<?php echo "$idEmpleado&idSemanaPlanilla=$idSemanaPlanilla"; ?>'"; ?><?php echo $salarioBruto ?></button>
 			</td>
