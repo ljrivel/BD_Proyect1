@@ -144,16 +144,11 @@
 			$nombre = $registro['NombreDeduccion'];
             $porcentajeAplicado = $registro['PorcentajeAplicado'];
             $montoAplicado = $registro['MontoAplicado'];
-
-            if ($porcentajeAplicado = null)
-            {
-                $porcentajeAplicado = 'No aplica';
-            }
 	?>
 			<tr>
 			
             <td class="subtabla"  align='center' ><?php echo $nombre ?></td>
-			<td class="subtabla"  align='center' ><?php echo $porcentajeAplicado ?></td>
+			<td class="subtabla"  align='center' ><?php echo "$porcentajeAplicado%" ?></td>
 			<td class="subtabla"  align='center' ><?php echo $montoAplicado ?></td>
             </tr>
             
