@@ -107,11 +107,6 @@
 
 <body class = "body">
 	
-	<div class="minidiv">
-		<br>
-		<br>
-		<button class="boton menu" onclick="location.href='MenuPrincipalEmpleado.php?id=0'">&#127968</button>
-	</div>
 	<center>
 	
 

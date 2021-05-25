@@ -121,6 +121,7 @@
 			<th class="subtabla encabezado">Horas Ordinarias</th>
 			<th class="subtabla encabezado">Horas Extra Normales</th>
 			<th class="subtabla encabezado">Horas Extra Dobles</th>
+			<th class="subtabla encabezado">Salario</th>
             
 		</tr>
 
@@ -147,7 +148,8 @@
             $horaSalida = $registro['HoraSalida']->format('D, d M Y g:i A');
 			$horasOrdinarias = $registro['HorasOrdinarias'];
 			$horasExtraNormales = $registro['HorasExtraNormales'];
-			$horasExtraDobles = $registro['HorasExtraDobles']
+			$horasExtraDobles = $registro['HorasExtraDobles'];
+			$salarioGanado = $registro['SalarioGanado']
 	?>
 			<tr>
 			
@@ -157,6 +159,7 @@
 			<td class="subtabla"  align='center' ><?php echo $horasOrdinarias?></td>
 			<td class="subtabla"  align='center' ><?php echo $horasExtraNormales ?></td>
 			<td class="subtabla"  align='center' ><?php echo $horasExtraDobles ?></td>
+			<td class="subtabla"  align='center' ><?php echo $salarioGanado ?></td>
             </tr>
             
 	<?php

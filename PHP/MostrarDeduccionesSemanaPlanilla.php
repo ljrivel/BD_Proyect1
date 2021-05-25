@@ -111,7 +111,7 @@
 
 	<div class="div">
 		<br>
-		<h1 class="h2">Últimas semanas</h1>	
+		<h1 class="h2">Deducciones de la semana planilla</h1>	
 
 			<table class="tabla" border="2">
 			<br>
@@ -136,9 +136,11 @@
 
 		}
 		
+
 		$exec = sqlsrv_query($conn, $query);
-		
+
 		while ($registro = sqlsrv_fetch_array($exec)){
+			
 			$nombre = $registro['NombreDeduccion'];
             $porcentajeAplicado = $registro['PorcentajeAplicado'];
             $montoAplicado = $registro['MontoAplicado'];
@@ -156,7 +158,7 @@
             </tr>
             
 	<?php
-		}    
+		}
 	?>
 		</table>
     	<br>
