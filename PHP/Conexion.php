@@ -7,15 +7,14 @@
 
 		private function __construct()
 		{
-			$serverName = 'CRISTHIAN\SQLEXPRESS';
+			$serverName = 'DESKTOP-SOECLHP';
 	
 			$connectionInfo = array('Database'=>'Planilla_Empleados', 'UID'=>'sa', 'PWD'=>'1234', 'CharacterSet'=>'UTF-8');
 	
 			self::$con = sqlsrv_connect($serverName, $connectionInfo);
 
 			if (self::$con){
-				//echo 'Conexión establecida';
-				//return $con; 
+				# echo 'Conexión establecida';
 			}
 			else
 			{
@@ -33,4 +32,7 @@
 			return self::$conexion;
 		}
 	}
+
+
+	$objeto = Conexion::conectar();
 ?>
