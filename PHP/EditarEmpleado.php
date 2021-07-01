@@ -156,7 +156,7 @@
 			Nombre completo:<br>
 			<input maxlength="64" value="<?php echo $_GET['nombre']?>" type="text" name="nombre" required/><br><br>
 
-			Fecha de nacimiento<br><input type="date" name="fechaNacimiento" pattern="\d{4}/\d{2}/\d{2}" required/><br><br> <!--pattern="\d{4}-\d{2}-\d{2}"-->
+			<!--Fecha de nacimiento<br><input type="date" name="fechaNacimiento" pattern="\d{4}/\d{2}/\d{2}" required/><br><br> <!--pattern="\d{4}-\d{2}-\d{2}"-->
 			
 			Puesto:<br>
 			<select name="puesto" id="puesto">
@@ -203,14 +203,17 @@
 				$idDepartamento = $_POST["departamento"];
 				$valorId = $_POST["valorDocId"];
 				$nombre = $_POST["nombre"];
-				$fechaNacimiento = $_POST["fechaNacimiento"];
+				#$fechaNacimiento = $_POST["fechaNacimiento"];
 
-                if ($fechaNacimiento === "")
+                /*if ($fechaNacimiento === "")
                 {
                     $fechaNacimiento = $_GET['fecha'];
                 }
+				*/
 
-				$query = "EXEC Editar_Empleado $id, $idTipoId, $idPuesto, $idDepartamento, $valorId, \"$nombre\",\"$fechaNacimiento\"";
+				#$query = "EXEC Editar_Empleado $id, $idTipoId, $idPuesto, $idDepartamento, $valorId, \"$nombre\",\"$fechaNacimiento\"";
+
+				$query = "EXEC Editar_Empleado $id, $idTipoId, $idPuesto, $idDepartamento, $valorId, \"$nombre\", 0";
 				echo $query;
 
 				$exec = sqlsrv_query($conn, $query);
@@ -223,7 +226,7 @@
 				echo "Nacimiento: $fechaNacimiento <br>";
 				*/
 
-				echo "<script> ; window.location='MostrarEmpleados.php' </script>";
+				//echo "<script> ; window.location='MostrarEmpleados.php' </script>";
 			}
 
 
